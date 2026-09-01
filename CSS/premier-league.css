@@ -1,0 +1,939 @@
+* {
+    font-family: "Rubik", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: black;
+}
+.container {
+    width: 100% !important;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* Mobile */
+@media (max-width: 767px) {
+    .container {
+        width: 400px;
+    }
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}    
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End-Global-Rules */
+/* Start-Variables */
+:root {
+    --main-color: #1a1a1a;
+    --second-color: #2c2c2c;
+    --third-color: #4a4a4a;
+    --font-color: #9f9f9f;
+    --main-transtion: .3s;
+}
+/* End-Variables */
+/* Premier-League-Main-Page */
+.premier-league {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 20px;
+}
+.premier-league .overview {
+    background-color: var(--main-color);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    border-radius: 15px;
+}
+.premier-league .overview .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.premier-league .overview .info .pre {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.premier-league .overview .info .pre img {
+    height: 45px;
+}
+.premier-league .overview .info .pre div {
+    text-transform: capitalize;
+}
+.premier-league .overview .info .pre div h2 {
+    color: white;
+    font-size: 21px;
+    font-weight: 600;
+}
+.premier-league .overview .info .pre div p {
+    color: var(--font-color);
+    font-size: 15px;
+}
+.premier-league .overview .info a {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid var(--third-color);
+    border-radius: 20px;
+    padding: 5px 12px;
+    transition: var(--main-transtion);
+}
+.premier-league .overview .info a:hover {
+    background-color: var(--second-color);
+}
+.premier-league .overview nav {
+    display: flex;
+    gap: 40px;
+}
+.premier-league .overview nav a {
+    color: var(--font-color);
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: .2s;
+}
+.premier-league .overview nav a:not(.active):hover {
+    color: var(--third-color);
+}
+.active {
+    color: white !important;
+    position: relative;
+}
+.active::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #2ad572;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 3px;
+}
+/* Start-Matches */
+.premier-league .matches {
+    background-color: var(--main-color);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 15px;
+    color: white;
+}
+.premier-league .matches .all-matches {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+.premier-league .matches .all-matches p {
+    font-size: 15px;
+    font-weight: 600;
+}
+.premier-league .matches .all-matches a {
+    color: #2ad572;
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--main-transtion);
+}
+.premier-league .matches .all-matches a:hover {
+    text-decoration: underline;
+}
+.premier-league .matches .next-matches {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.premier-league .matches .next-matches a {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 380px;
+    height: 120px;
+    border: 1px solid var(--second-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    position: relative;
+}
+.premier-league .matches .next-matches a::before {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    font-size: 19px;
+    font-weight: 700;
+}
+.premier-league .matches .next-matches a:first-of-type:before {
+    content: "2:30pm";
+}
+.premier-league .matches .next-matches a:nth-of-type(2):before,
+.premier-league .matches .next-matches a:nth-of-type(3):before {
+    content: "5:00 pm";
+}
+.premier-league .matches .next-matches a::after {
+    content: "oct 5";
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--font-color);
+}
+.premier-league .matches .next-matches a p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.premier-league .matches .next-matches a p img {
+    width: 32px;
+    height: 32px;
+}
+.premier-league .matches .next-matches i {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--third-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--main-transtion);
+}
+.premier-league .matches .next-matches i:hover {
+    background-color: white;
+    color: black;
+}
+/* End-Matches */
+/* Start-Statistics */
+.premier-league .statistics {
+    display: flex;
+    gap: 15px;
+}
+.premier-league .statistics .table {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color);
+    width: 67%;
+    border-radius: 15px;
+    padding: 10px 0;
+}
+.premier-league .statistics .table .head {
+    padding: 15px 20px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--font-color);
+}
+.premier-league .statistics .table .head div {
+    display: flex;
+    gap: 18px;
+    width: 535px;
+}
+.premier-league .statistics .table .head div p:not(:nth-child(8)) {
+    width: 30px;
+    text-align: center;
+}
+.premier-league .statistics .table .head div p:nth-child(8) {
+    width: 160px;
+    text-transform: capitalize;
+}
+.premier-league .statistics .table .head div p:last-child {
+    text-transform: capitalize;
+}
+.premier-league .statistics .table a {
+    padding: 8px 20px 8px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7px;
+    color: white;
+    text-transform: capitalize;
+    transition: var(--main-transtion);
+    position: relative;
+}
+.premier-league .statistics .table a:first-of-type::before,
+.premier-league .statistics .table a:nth-of-type(2)::before,
+.premier-league .statistics .table a:nth-of-type(3)::before,
+.premier-league .statistics .table a:nth-of-type(4)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 80%;
+    background-color: #2ad572;
+}
+.premier-league .statistics .table a:nth-of-type(5)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 80%;
+    background-color: #0046a7;
+}
+.premier-league .statistics .table a:nth-of-type(18)::before,
+.premier-league .statistics .table a:nth-of-type(19)::before,
+.premier-league .statistics .table a:last-of-type::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 80%;
+    background-color: #ff4646;
+}
+.premier-league .statistics .table a:hover {
+    background-color: var(--second-color);
+}
+.premier-league .statistics .table a div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.premier-league .statistics .table a div:first-child p:first-child {
+    font-size: 14px;
+    width: 0;
+    display: flex;
+    justify-content: center;
+}
+.premier-league .statistics .table a div:first-child p:last-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+.premier-league .statistics .table a div:first-child p img {
+    width: 18px;
+}
+.premier-league .statistics .table a div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    font-size: 13px;
+    width: 535px;
+}
+.premier-league .statistics .table a div:last-child p {
+    width: 30px;
+    text-align: center;
+}
+.premier-league .statistics .table a div:last-child div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 160px;
+}
+.premier-league .statistics .table a div:last-child img {
+    width: 18px;
+}
+.win,
+.lost,
+.draw {
+    width: 24px !important;
+    height: 24px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.win {
+    background-color: #00985f;
+}
+.lost {
+    background-color: #dd3636;
+}
+.draw {
+    background-color: #8d9499;
+}
+.statistics .totw {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: var(--main-color);
+    height: fit-content;
+}
+.statistics .totw .head {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.statistics .totw .head h2 {
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+}
+.statistics .totw .head div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+}
+.statistics .totw .head div .fa-chevron-left,
+.statistics .totw .head div .fa-chevron-right {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    background-color: var(--third-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--main-transtion);
+}
+.statistics .totw .head div .fa-chevron-left:hover {
+    background-color: white;
+    color: black;
+}
+.statistics .totw .head div .fa-chevron-right {
+    background-color: var(--second-color);
+    color: var(--font-color);
+    cursor: unset;
+}
+.statistics .totw .head div a {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.statistics .totw .players {
+    display: flex;
+    position: relative;
+}
+.statistics .totw .players img {
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.statistics .totw .players .gk {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.statistics .totw .players a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--third-color);
+    position: relative;
+}
+.statistics .totw .players a::before {
+    position: absolute;
+    top: -12px;
+    right: -15px;
+    background-color: #33c771;
+    color: black;
+    border-radius: 10px;
+    padding: 1px 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.statistics .totw .players a::after {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+.statistics .totw .players .gk a::before {
+    content: "9.1";
+}
+.statistics .totw .players .gk a::after {
+    content: "hermansen";
+}
+.statistics .totw .players a img:first-child {
+    border-radius: 50%;
+    width: 100%;
+}
+.statistics .totw .players a img:last-child {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 18px;
+    height: 18px;
+}
+.statistics .totw .players .cb {
+    position: absolute;
+    bottom: 145px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 35px;
+}
+.statistics .totw .players .cb a:first-child:before {
+    content: "8.2";
+}
+.statistics .totw .players .cb a:first-child:after {
+    content: "gvardiol";
+}
+.statistics .totw .players .cb a:nth-child(2):before {
+    content: "8.3";
+}
+.statistics .totw .players .cb a:nth-child(2):after {
+    content: "guehi";
+}
+.statistics .totw .players .cb a:nth-child(3):before {
+    content: "8.1";
+}
+.statistics .totw .players .cb a:nth-child(3):after {
+    content: "lacroix";
+}
+.statistics .totw .players .cb a:last-child:before {
+    content: "8.7";
+}
+.statistics .totw .players .cb a:last-child::after {
+    content: "timber";
+}
+.statistics .totw .players .cm {
+    position: absolute;
+    bottom: 265px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 60px;
+}
+.statistics .totw .players .cm a:first-child:before {
+    content: "9.9";
+}
+.statistics .totw .players .cm a:first-child:after {
+    content: "palmer";
+}
+.statistics .totw .players .cm a:nth-child(2):before {
+    content: "8.7";
+}
+.statistics .totw .players .cm a:nth-child(2):after {
+    content: "kuluesvski";
+}
+.statistics .totw .players .cm a:nth-child(3):before {
+    content: "8.9";
+}
+.statistics .totw .players .cm a:nth-child(3):after {
+    content: "baleba";
+}
+.statistics .totw .players .st {
+    position: absolute;
+    bottom: 385px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 60px;
+}
+.statistics .totw .players .st a:first-child:before {
+    content: "8.2";
+}
+.statistics .totw .players .st a:first-child:after {
+    content: "solanke";
+}
+.statistics .totw .players .st a:nth-child(2):before {
+    content: "8.8";
+}
+.statistics .totw .players .st a:nth-child(2):after {
+    content: "delap";
+}
+.statistics .totw .players .st a:nth-child(3):before {
+    content: "8.3";
+}
+.statistics .totw .players .st a:nth-child(3):after {
+    content: "johnson";
+}
+/* End-Statistics */
+/* Start-Top-PLayers */
+.premier-league .top-players {
+    width: 66.5%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    border-radius: 15px;
+}
+.premier-league .top-players .top-rated,
+.premier-league .top-players .top-scores,
+.premier-league .top-players .top-assists {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.premier-league .top-players .top-rated,
+.premier-league .top-players .top-scores {
+    border-right: 1px solid var(--second-color);
+}
+.premier-league .top-players h3 {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: white;
+}
+.premier-league .top-players .rates {
+    display: flex;
+    flex-direction: column;
+}
+.premier-league .top-players .rates a {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    text-transform: capitalize;
+    gap: 10px;
+    position: relative;
+}
+.premier-league .top-players .rates a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1d1d1d50;
+    display: none;
+    transition: var(--main-transtion);
+}
+.premier-league .top-players .rates a:hover::after {
+    display: flex;
+}
+.premier-league .top-players .rates a:not(:last-child) {
+    border-bottom: 1px solid var(--second-color);
+}
+.premier-league .top-players .rates a .player {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--third-color);
+}
+.premier-league .top-players .rates a div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-right: 20px;
+    width: 130px;
+}
+.premier-league .top-players .rates a div h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+.premier-league .top-players .rates a div p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    color: var(--font-color);
+    font-weight: 600;
+}
+.premier-league .top-players .rates a div p img {
+    width: 18px;
+}
+.premier-league .top-players .rates a .rate {
+    color: white;
+    border-radius: 15px;
+    padding: 3px 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.premier-league .top-players .top-rated .rates a:first-of-type .rate,
+.premier-league .top-players .top-scores .rates a:first-of-type .rate {
+    background-color: #76b4e5;
+    color: black;
+}
+.premier-league .top-players .top-assists .rates a:first-of-type .rate {
+    background-color: #bd0510;
+}
+/* End-Top-PLayers */
+/* Start-Premier-League-News */
+.premier-league .premier-league-news {
+    width: 66.5%;
+    background-color: var(--main-color);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+.premier-league .premier-league-news h5 {
+    text-align: center;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: white;
+}
+.premier-league .premier-league-news .latest-news {
+    display: flex;
+    flex-direction: column;
+}
+.premier-league .premier-league-news .latest-news .report {
+    display: flex;
+    gap: 25px;
+    padding: 20px 25px;
+    position: relative;
+    transition: var(--main-transtion);
+}
+.premier-league .premier-league-news .latest-news .report::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1d1d1d50;
+    display: none;
+    transition: var(--main-transtion);
+}
+.premier-league .premier-league-news .latest-news .report:hover::after {
+    display: flex;
+}
+.premier-league .premier-league-news .latest-news .report .address {
+    width: 215px;
+    height: 120px;
+}
+.premier-league .premier-league-news .latest-news .report div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.premier-league .premier-league-news .latest-news .report div h3 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+    transition: var(--main-transtion);
+}
+.premier-league .premier-league-news .latest-news .report:hover div h3 {
+    text-decoration: underline;
+}
+.premier-league .premier-league-news .latest-news .report div h3 span {
+    text-transform: none;
+}
+.premier-league .premier-league-news .latest-news .report div p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: white;
+}
+.premier-league .premier-league-news .latest-news .report div p img {
+    width: 18px;
+}
+.premier-league .premier-league-news .latest-news .report div p span {
+    font-weight: 500; 
+    color: var(--font-color);
+}
+.premier-league .premier-league-news .more {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    padding-top: 20px;
+    border-top: 1px solid var(--second-color);
+    transition: var(--main-transtion);
+}
+.premier-league .premier-league-news .more:hover {
+    text-decoration: underline;
+}
+/* End-Premier-League-News */
+/* Start-Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color);
+    margin-top: 50px;
+}
+footer .fotmob {
+    display: flex;
+    gap: 170px;
+    padding: 40px 5px;
+}
+footer .fotmob .app {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 270px;
+}
+footer .fotmob .app img {
+    width: 55px;
+}
+footer .fotmob .app h2 {
+    font-weight: 500;
+    color: white;
+}
+footer .fotmob .links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+}
+footer .fotmob .links a {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    transition: var(--main-transtion);
+}
+footer .fotmob .links a:nth-child(8) {
+    text-transform: uppercase;
+}
+footer .fotmob .links a:hover {
+    text-decoration: underline;
+}
+footer .fotmob .get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+footer .fotmob .get-the-app h3 {
+    font-size: 19px;
+    font-weight: 400;
+    color: white;
+}
+footer .fotmob .get-the-app div {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+footer .fotmob .get-the-app div a {
+    background-color: var(--second-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .fotmob .get-the-app div a:hover {
+    background-color: var(--third-color);
+}
+footer .fotmob .get-the-app div a i {
+    color: white;
+}
+footer .fotmob .get-the-app div a img {
+    width: 40px;
+    margin-left: 3px;
+}
+footer .social-media {
+    display: flex;
+    gap: 170px;
+    padding: 40px 15px;
+    background-color: #1d1d1d;
+}
+footer .social-media .copy-right {
+    font-size: 13px;
+    text-transform: capitalize;
+    color: var(--font-color);
+    width: 270px;
+}
+footer .social-media .policies {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+}
+footer .social-media .policies div {
+    display: flex;
+    gap: 15px;
+}
+footer .social-media .policies div a {
+    font-size: 13px;
+    color: var(--font-color);
+    position: relative;
+    transition: var(--main-transtion);
+}
+footer .social-media .policies div a:hover {
+    text-decoration: underline;
+}
+footer .social-media .policies div a:first-child:after,
+footer .social-media .policies div a:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -10px;
+    background-color: #717171;
+    width: 3.5px;
+    height: 3.5px;
+    border-radius: 50%;
+}
+footer .social-media .policies p {
+    font-size: 12px;
+    color: #717171;
+    line-height: 1.3;
+}
+footer .social-media .social {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+footer .social-media .social i {
+    color: white;
+}
+footer .social-media .social i:hover {
+    color: var(--font-color);
+}
+footer .social-media .social p {
+    font-size: 15px;
+    color: white;
+}
+/* End-Footer */
+/* Premier-League-Main-Page */

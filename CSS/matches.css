@@ -1,0 +1,154 @@
+* {
+    font-family: "Rubik", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: black;
+}
+.container {
+    width: 100% !important;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* Mobile */
+@media (max-width: 767px) {
+    .container {
+        width: 400px;
+    }
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}    
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End-Global-Rules */
+/* Start-Variables */
+:root {
+    --main-color: #1a1a1a;
+    --second-color: #2c2c2c;
+    --third-color: #4a4a4a;
+    --font-color: #9f9f9f;
+    --main-transtion: .3s;
+}
+/* End-Variables */
+/* Start-Matches */
+.premier-league .the-matches {
+    background-color: var(--main-color);
+    border-radius: 15px;
+}
+.premier-league .the-matches .head {
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    border-bottom: 1px solid var(--second-color);
+}
+.premier-league .the-matches .head a {
+    color: var(--font-color);
+    font-size: 15px;
+    font-weight: 600;
+    transition: .2s;
+}
+.premier-league .the-matches .head a:not(.active):hover {
+    color: var(--third-color);
+}
+.premier-league .the-matches .round-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    border-bottom: 1px solid var(--second-color);
+}
+.premier-league .the-matches .round-date i {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--third-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--main-transtion);
+    color: white;
+}
+.premier-league .the-matches .round-date i:hover {
+    background-color: white;
+    color: black;
+}
+.premier-league .the-matches .round-date p {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: white;
+}
+.premier-league .the-matches h3 {
+    padding: 10px 15px;
+    margin: 0 25px;
+    background-color: var(--second-color);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+}
+.premier-league .the-matches .day-matches{
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+}
+.premier-league .the-matches .day-matches a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    transition: var(--main-transtion);
+}
+.premier-league .the-matches .day-matches a:hover {
+    background-color: var(--second-color);
+}
+.premier-league .the-matches .day-matches a img {
+    width: 22px;
+}
+.premier-league .the-matches .day-matches a p:first-child,
+.premier-league .the-matches .day-matches a p:last-child {
+    font-size: 14px;
+    text-transform: capitalize;
+    color: white;
+    width: 175px;
+}
+.premier-league .the-matches .day-matches a p:first-child {
+    display: flex;
+    justify-content: flex-end;
+}
+.premier-league .the-matches .day-matches a  p:nth-of-type(2) {
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--font-color);
+    line-height: 1.1;
+    width: 40px;
+}
+/* End-Matches */

@@ -1,0 +1,211 @@
+* {
+    font-family: "Rubik", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: black;
+}
+.container {
+    width: 100% !important;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* Mobile */
+@media (max-width: 767px) {
+    .container {
+        width: 400px;
+    }
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}    
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End-Global-Rules */
+/* Start-Variables */
+:root {
+    --main-color: #1a1a1a;
+    --second-color: #2c2c2c;
+    --third-color: #4a4a4a;
+    --font-color: #9f9f9f;
+    --main-transtion: .3s;
+}
+/* End-Variables */
+/* Start-Transfers */
+.premier-league .transfers {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color);
+    border-radius: 15px;
+}
+.premier-league .transfers .head {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid var(--second-color);
+}
+.premier-league .transfers .head div {
+    display: flex;
+    gap: 50px;
+}
+.premier-league .transfers .head p {
+    font-size: 14px;
+    text-transform: capitalize;
+    color: var(--font-color);
+}
+.premier-league .transfers .head div p:first-child {
+    width: 88px;
+}
+.premier-league .transfers .head div p:nth-child(2) {
+    width: 145px;
+}
+.premier-league .transfers .head div p:nth-child(3) {
+    width: 55px;
+}
+.premier-league .transfers .head div p:nth-child(4) {
+    width: 145px;
+}
+.premier-league .transfers .head div p:nth-child(5) {
+    width: 85px;
+}
+.premier-league .transfers .head div p:last-child {
+    width: 50px;
+}
+.premier-league .transfers .transfer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    transition: var(--main-transtion);
+}
+.premier-league .transfers .transfer:not(:last-child) {
+    border-bottom: 1px solid var(--second-color);
+}
+.premier-league .transfers .transfer:hover {
+    background-color: var(--second-color);
+}
+.premier-league .transfers .transfer .person {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.premier-league .transfers .transfer .person .player {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--second-color);
+}
+.premier-league .transfers .transfer .person .info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.premier-league .transfers .transfer .person .info h3 {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: white;
+}
+.premier-league .transfers .transfer .person .info div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.premier-league .transfers .transfer .person .info div i {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2ad572;
+}
+.premier-league .transfers .transfer .person .info div img {
+    width: 20px;
+}
+.premier-league .transfers .transfer .person .info div p {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--font-color);
+}
+.premier-league .transfers .transfer .details {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.premier-league .transfers .transfer .details p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: white;
+}
+.premier-league .transfers .transfer .details .first {
+    width: 88px;
+}
+.premier-league .transfers .transfer:nth-child(7) .details .first {
+    text-transform: uppercase;
+}
+.premier-league .transfers .transfer .details p:nth-child(2) {
+    width: 145px;
+}
+.premier-league .transfers .transfer .details div {
+    width: 55px;
+    display: flex;
+    justify-content: center;
+}
+.premier-league .transfers .transfer:nth-child(2) .details div {
+    opacity: 0;
+}
+.premier-league .transfers .transfer .details div:nth-child(3) p {
+    width: fit-content;
+    background-color: var(--third-color);
+    padding: 4px 8px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--font-color);
+}
+.premier-league .transfers .transfer .details p:nth-child(4) {
+    width: 145px;
+}
+.premier-league .transfers .transfer .details p:nth-child(5) {
+    width: 85px;
+    text-transform: uppercase;
+}
+.premier-league .transfers .transfer .details p:last-child {
+    width: 50px;
+    color: var(--font-color);
+}
+.premier-league .transfers .transfer .details p img {
+    width: 20px;
+}
+/* end-Transfers */

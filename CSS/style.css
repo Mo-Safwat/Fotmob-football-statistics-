@@ -1,0 +1,604 @@
+* {
+    font-family: "Rubik", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: black;
+}
+.container {
+    width: 100% !important;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* Mobile */
+@media (max-width: 767px) {
+    .container {
+        width: 400px;
+    }
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}    
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End-Global-Rules */
+/* Start-Variables */
+:root {
+    --main-color: #1a1a1a;
+    --second-color: #2c2c2c;
+    --third-color: #4a4a4a;
+    --font-color: #9f9f9f;
+    --main-transtion: .3s;
+}
+/* End-Variables */
+/* Start-Header */
+header {
+    background-color: var(--main-color);
+}
+header .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container .first-face {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    position: relative;
+}
+header .container .first-face a img {
+    width: 125px;
+}
+header .container .first-face input {
+    outline: 0;
+    padding: 12px 80px 12px 45px;
+    border-radius: 40px;
+    border: 0;
+    background-color: var(--second-color);
+    text-transform: capitalize;
+    position: relative;
+    color: white;
+}
+header .container .first-face::before {
+    content: "\f002";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 255px;
+    color: var(--font-color);
+    font-size: 15px;
+    z-index: 1;
+}
+header .container nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+header .container nav a {
+    color: white;
+}
+header .container nav div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 19px;
+    text-transform: capitalize;
+    font-weight: 800;
+}
+header .container nav div:first-child a:hover {
+    text-decoration: underline;
+}
+header .container nav div:first-child a span {
+    text-transform: none;
+}
+header .container nav div:first-child i {
+    cursor: pointer;
+}
+header .container nav i {
+    color: white;
+}
+header .container nav div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    gap: 15px;
+    padding-left: 20px;
+    border-left: 1px solid var(--second-color);
+}
+header .container nav div:last-child a {
+    background-color: var(--second-color);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .container nav div:last-child a:hover {
+    background-color: var(--third-color);
+}
+header .container nav div:last-child a img {
+    width: 25px;
+    margin-left: 3px;
+}
+/* End-Header */
+/* Main-Page */
+.body-container {
+    display: grid;
+    grid-template-columns: 320px 1fr 320px;
+    gap: 15px;
+    padding-top: 15px;
+    color: white;
+}
+.body-container a {
+    color: white;
+    text-transform: capitalize;
+}
+.body-container .top-leagues {
+    background-color: var(--main-color);
+    border-radius: 15px;
+    padding: 20px 0 10px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+.body-container .top-leagues h3 {
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-bottom: 13px;
+}
+.body-container .top-leagues a {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 12px 20px;
+    font-size: 14px;
+    transition: var(--main-transtion);
+}
+.body-container .top-leagues a:hover {
+    background-color: var(--second-color);
+}
+.body-container .top-leagues a img {
+    width: 17px;
+}
+.body-container .matches {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.body-container .matches .match .date {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 1px solid var(--second-color);
+}
+.body-container .matches .match .date .fa-sm {
+    width: 25px;
+    height: 25px;
+    background-color: var(--third-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--main-transtion);
+    cursor: pointer;
+}
+.body-container .matches .match .date .fa-sm:hover {
+    background-color: white;
+    color: black;
+}
+.body-container .matches .match .date a {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.body-container .matches .match .filter {
+    background-color: var(--main-color);
+    display: flex;
+    gap: 10px;
+    padding: 18px 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: relative;
+}
+.body-container .matches .match .filter a {
+    background-color: var(--second-color);
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: var(--main-transtion);
+}
+.body-container .matches .match .filter a:hover {
+    background-color: var(--third-color);
+}
+.body-container .matches .match .filter input {
+    background-color: var(--second-color);
+    padding: 8px 120px 8px 45px;
+    border-radius: 25px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    color: white;
+}
+.body-container .matches .match .filter:after {
+    content: "\f884";
+    position: absolute;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    top: 50%;
+    left: calc(50% - 8px);
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: var(--font-color);
+}
+.body-container .matches .match .champ {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: var(--second-color);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: var(--main-transtion);
+}
+.body-container .matches .match .champ:hover {
+    background-color: var(--third-color);
+}
+.body-container .matches .match .champ img {
+    width: 17px;
+}
+.body-container .matches .match .info {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 0;
+    transition: var(--main-transtion);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: relative;
+}
+.body-container .matches .match .info:hover {
+    background-color: var(--third-color);
+}
+.body-container .matches .match .info img {
+    width: 25px;
+}
+.body-container .matches .match .info p:first-child,
+.body-container .matches .match .info p:last-child {
+    font-size: 14px;
+    font-weight: 600;
+}
+.body-container .matches .match .info p:nth-of-type(2) {
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--font-color);
+    line-height: 1.1;
+    position: relative;
+}
+.body-container .matches .match .info::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    padding: 3px 5px;
+    background-color: var(--third-color);
+    border-radius: 50%;
+    color: var(--font-color);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.body-container .matches .match .esp::before,
+.body-container .matches .match .itl::before {
+    content: "ft";
+}
+.body-container .matches .match .itl p:nth-of-type(2)::before {
+    content: "";
+    height: 8px;
+    width: 5px;
+    background-color: red;
+    position: absolute;
+    top: -12px;
+    left: 1px;
+}
+.body-container .matches .match .ger::before {
+    content: "85";
+    background-color: green;
+    color: white;
+}
+.body-container .matches .match .fr::before {
+    content: "ft";
+}
+.body-container .matches .match .caf::before {
+    content: "pen";
+    border-radius: 20px;
+    font-size: 11px;
+    text-transform: capitalize;
+}
+.body-container .matches .match .caf p:first-child {
+    text-decoration: line-through;
+    color: var(--font-color);
+}
+.body-container .matches .custom-table {
+    background-color: var(--main-color);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.body-container .matches .custom-table h3 {
+    padding: 15px;
+    border-bottom: 1px solid var(--second-color);
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.body-container .matches .custom-table table {
+    width: 100%;
+    border-collapse: collapse;
+    text-transform: capitalize;
+}
+.body-container .matches .custom-table td {
+    padding: 14px 15px;
+    border-bottom: 1px solid var(--second-color);
+    color: white;
+    font-size: 14px;
+}
+.body-container .matches .custom-table tr:first-child td {
+    color: var(--font-color);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.body-container .matches .custom-table tr:last-child td {
+    border-bottom: 0;
+}
+.body-container .information {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.body-container .information .news,
+.body-container .information .statistics {
+    background-color: var(--main-color);
+    border-radius: 15px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+.body-container .information .news h3 {
+    padding-left: 15px;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.body-container .information .news a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 15px 35px;
+    border-bottom: 1px solid var(--second-color);
+    position: relative;
+}
+.body-container .information .news a::after {
+    content: "90min . 2hr . ago";
+    position: absolute;
+    bottom: 12px;
+    left: 15px;
+    font-size: 12px;
+    color: var(--font-color);
+    font-weight: 600;
+    text-transform: none;
+}
+.body-container .information .news a img {
+    width: 100%;
+    border-radius: 10px;
+}
+.body-container .information .news a p {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: none;
+    transition: var(--main-transtion);
+}
+.body-container .information .news a:hover p {
+    text-decoration: underline;
+}
+.row {
+    flex-direction: unset !important;
+    align-items: unset !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+.row img {
+    width: 72px !important;
+    height: 72px !important;
+    border-radius: 14px !important;
+}
+.row p {
+    text-transform: capitalize !important;
+    font-size: 13px !important;
+}
+.row::after {
+    bottom: 27px !important;
+    left: 102px !important;
+}
+.row-1::after {
+    content: "FotMop . 7hr . ago" !important;
+}
+.row-2::after {
+    content: "FotMop . 3hr . ago" !important;
+    bottom: 15px !important;
+}
+.row-2 p {
+    text-transform: none !important;
+}
+.row-3::after {
+    content: "90min . 3hr . ago" !important;
+}
+.row-3 p {
+    text-transform: none !important;
+}
+.body-container .information .statistics .league {
+    padding: 0 15px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    border-bottom: 1px solid var(--third-color);
+    cursor: pointer;
+}
+.body-container .information .statistics .league div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.body-container .information .statistics .league div:first-child h3 {
+    font-size: 16px;
+}
+.body-container .information .statistics .league div:first-child p {
+    font-size: 14px;
+    color: var(--font-color);
+}
+.body-container .information .statistics .league div:last-child {
+    border: 1px solid var(--third-color);
+    border-radius: 50%;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+}
+.body-container .information .statistics .league div img {
+    height: 27px;
+}
+.body-container .information .statistics .table {
+    display: flex;
+    flex-direction: column;
+}
+.body-container .information .statistics .table .head {
+    padding: 15px 15px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--font-color);
+}
+.body-container .information .statistics .table .head div {
+    display: flex;
+    gap: 10px;
+}
+.body-container .information .statistics .table a {
+    padding: 8px 0  8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7px;
+    transition: var(--main-transtion);
+    position: relative;
+}
+.body-container .information .statistics .table a:first-of-type::before,
+.body-container .information .statistics .table a:nth-of-type(2)::before,
+.body-container .information .statistics .table a:nth-of-type(3)::before,
+.body-container .information .statistics .table a:nth-of-type(4)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 80%;
+    background-color: #2ad572;
+}
+.body-container .information .statistics .table a:nth-of-type(5)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 80%;
+    background-color: #0046a7;
+}
+.body-container .information .statistics .table a:nth-of-type(18)::before,
+.body-container .information .statistics .table a:nth-of-type(19)::before,
+.body-container .information .statistics .table a:last-of-type::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 80%;
+    background-color: #ff4646;
+}
+.body-container .information .statistics .table a:hover {
+    background-color: var(--second-color);
+}
+.body-container .information .statistics .table a div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.body-container .information .statistics .table a div:first-child p:first-child {
+    font-size: 14px;
+    width: 0;
+    display: flex;
+    justify-content: center;
+}
+.body-container .information .statistics .table a div:first-child p:last-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+.body-container .information .statistics .table a div:first-child p img {
+    width: 18px;
+}
+.body-container .information .statistics .table a div:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    font-size: 13px;
+    width: 100px;
+}
+/* Main-Page */

@@ -1,0 +1,12 @@
+.champions-league .statistics .table {
+    width: 100%;
+}
+.champions-league .statistics .table .head div p:not(:nth-child(8)) {
+    width: 30px;
+    text-align: center;
+}
+.champions-league .statistics .table .head div p:nth-child(8) {
+    width: 58px;
+    text-transform: capitalize;
+    text-align: start;
+}
